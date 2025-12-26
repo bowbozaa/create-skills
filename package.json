@@ -1,0 +1,40 @@
+{
+    "name": "create-skills",
+    "version": "1.0.0",
+    "description": "CLI tool for creating and managing Anthropic Agent Skills",
+    "main": "dist/index.js",
+    "type": "module",
+    "bin": {
+        "create-skills": "dist/index.js"
+    },
+    "keywords": [
+        "anthropic",
+        "claude",
+        "agent-skills",
+        "skills",
+        "cli"
+    ],
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc && node scripts/copy-templates.js",
+        "start": "node dist/index.js",
+        "dev": "tsx src/index.ts",
+        "prepublishOnly": "npm run build"
+    },
+    "dependencies": {
+        "commander": "^11.1.0",
+        "js-yaml": "^4.1.0",
+        "chalk": "^5.3.0",
+        "inquirer": "^9.2.12",
+        "fs-extra": "^11.2.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/inquirer": "^9.0.3",
+        "@types/js-yaml": "^4.0.9",
+        "@types/node": "^20.0.0",
+        "tsx": "^4.7.0",
+        "typescript": "^5.3.3"
+    }
+}
